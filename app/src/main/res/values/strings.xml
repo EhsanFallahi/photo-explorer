@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ImageApp</string>
+    <string name="app_name">PhotoExplorer</string>
+    <string name="download">دانلود</string>
+    <string name="title_button_retry">مجدد تلاش کنید</string>
+    <string name="title_error_loading">خطا در هنگام بارگذاری!</string>
+    <string name="title_result_error">نتیجه ای یافت نشد.</string>
 </resources>

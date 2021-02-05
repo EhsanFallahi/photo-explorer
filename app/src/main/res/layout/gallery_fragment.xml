@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GalleryFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_photo"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_login"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:lottie_rawRes="@raw/loading" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_retry"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/text_view_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_error_loading"
+        android:textColor="#F44336"
+        android:textSize="21sp"
+        android:fontFamily="@font/font_fa_three"
+        android:layout_above="@id/btn_retry"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/text_view_result_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_result_error"
+        android:textColor="#757477"
+        android:textSize="21sp"
+        android:fontFamily="@font/font_fa_three"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+</RelativeLayout>
