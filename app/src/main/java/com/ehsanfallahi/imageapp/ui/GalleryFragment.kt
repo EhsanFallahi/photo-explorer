@@ -7,12 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ehsanfallahi.imageapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GalleryFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = GalleryFragment()
-    }
 
     private lateinit var viewModel: GalleryViewModel
 
@@ -20,13 +18,11 @@ class GalleryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewModel = ViewModelProvider(this).get(GalleryViewModel::class.java)
+
+
         return inflater.inflate(R.layout.gallery_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(GalleryViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }
