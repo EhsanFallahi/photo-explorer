@@ -1,4 +1,4 @@
-package com.ehsanfallahi.imageapp
+package com.ehsanfallahi.imageapp.ui
 
 import androidx.lifecycle.ViewModel
 
